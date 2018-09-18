@@ -1,0 +1,5 @@
+CREATE KEYSPACE tictactoe WITH replication = {'class': 'SimpleStrategy', 'replication_factor': '1'}  AND durable_writes = true;
+CREATE KEYSPACE TicTacToe WITH replication = {'class':'SimpleStrategy', 'replication_factor':1};
+cqlsh:tictactoe> CREATE TABLE UserDetails(FName text, LName text, UserName text PRIMARY KEY, TokenID int);
+SELECT * FROM tictactoe.userdetails;
+CREATE TABLE LogDetails(LogId TIMEUUID PRIMARY KEY, Request text, Response text, Exception text, Comments text);
